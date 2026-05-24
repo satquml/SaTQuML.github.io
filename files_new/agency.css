@@ -1065,3 +1065,470 @@ body
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #fec503;}
+
+/* SaTQuML academic-modern theme overrides */
+:root
+{
+	--ink-900: #0f172a;
+	--ink-800: #1e293b;
+	--ink-700: #334155;
+	--slate-500: #64748b;
+	--slate-300: #cbd5f5;
+	--mist-100: #f8fafc;
+	--accent-500: #0ea5a5;
+	--accent-300: #5eead4;
+	--gold-400: #c08d3c;
+	--glass: rgba(255, 255, 255, 0.7);
+	--shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.12);
+	--shadow-tight: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+body.satquml-modern
+{
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--ink-800);
+	background-color: #f4f7fb;
+	background-image:
+		radial-gradient(circle at 12% 12%, rgba(14, 165, 165, 0.12), transparent 40%),
+		radial-gradient(circle at 88% 20%, rgba(192, 141, 60, 0.12), transparent 45%),
+		linear-gradient(180deg, rgba(248, 250, 252, 0.9), rgba(244, 247, 251, 0.9));
+	background-attachment: fixed;
+}
+
+body.satquml-modern h1,
+body.satquml-modern h2,
+body.satquml-modern h3,
+body.satquml-modern h4,
+body.satquml-modern h5,
+body.satquml-modern h6
+{
+	font-family: 'Spectral', serif;
+	letter-spacing: 0.2px;
+}
+
+body.satquml-modern a
+{
+	color: var(--accent-500);
+	transition: color 0.2s ease;
+}
+
+body.satquml-modern a:hover,
+body.satquml-modern a:focus
+{
+	color: var(--gold-400);
+	text-decoration: none;
+}
+
+body.satquml-modern a:focus-visible,
+body.satquml-modern .hero-btn:focus-visible
+{
+	outline: 2px solid var(--accent-300);
+	outline-offset: 3px;
+	text-decoration: underline;
+}
+
+body.satquml-modern a:focus,
+body.satquml-modern .hero-btn:focus
+{
+	outline: 2px solid var(--accent-300);
+	outline-offset: 3px;
+	text-decoration: underline;
+}
+
+body.satquml-modern .navbar-default
+{
+	background-color: rgba(15, 23, 42, 0.05);
+	-webkit-backdrop-filter: blur(14px);
+	backdrop-filter: blur(14px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.satquml-modern .navbar-default.navbar-shrink
+{
+	background-color: rgba(15, 23, 42, 0.5);
+}
+
+body.satquml-modern .navbar-default .nav li a
+{
+	color: #f8fafc;
+	font-weight: 500;
+	letter-spacing: 0.3px;
+}
+
+body.satquml-modern .navbar-default .nav li a:hover,
+body.satquml-modern .navbar-default .nav li a:focus
+{
+	color: var(--accent-300);
+}
+
+body.satquml-modern header.hero
+{
+	position: relative;
+	min-height: 620px;
+	padding: 140px 0 100px;
+	color: #f8fafc;
+	background-image:
+		linear-gradient(120deg, rgba(15, 23, 42, 0.28), rgba(15, 23, 42, 0.18)),
+		url("../img/satquml-background.png");
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
+
+body.satquml-modern header.hero::after
+{
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(15, 23, 42, 0.08);
+	pointer-events: none;
+}
+
+body.satquml-modern .hero-grid
+{
+	position: relative;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+	align-items: center;
+	justify-items: center;
+}
+
+body.satquml-modern .hero-content
+{
+	max-width: 1100px;
+}
+
+body.satquml-modern .hero-badge
+{
+	display: inline-block;
+	padding: 14px 32px;
+	border-radius: 999px;
+	background: rgba(15, 23, 42, 0.55);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	font-size: 2.3rem;
+	font-weight: 700;
+	letter-spacing: 0.8px;
+	text-transform: none;
+	text-shadow: 0 2px 10px rgba(15, 23, 42, 0.5);
+}
+
+body.satquml-modern .hero-title
+{
+	margin-top: 18px;
+	font-size: clamp(3.1rem, 6vw, 5.1rem);
+	line-height: 1.05;
+	color: #f8fafc;
+	text-shadow: 0 10px 30px rgba(15, 23, 42, 0.45);
+}
+
+body.satquml-modern .hero-lead
+{
+	margin-top: 18px;
+	font-size: 1.15rem;
+	color: rgba(248, 250, 252, 0.9);
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body.satquml-modern .hero-contact
+{
+	margin-top: 16px;
+	font-size: 1rem;
+}
+
+body.satquml-modern .hero-contact a
+{
+	color: #f8fafc;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body.satquml-modern .hero-actions
+{
+	margin-top: 28px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	justify-content: center;
+}
+
+body.satquml-modern .hero-btn
+{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 22px;
+	border-radius: 999px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	border: 1px solid transparent;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+body.satquml-modern .hero-btn.primary
+{
+	background: var(--accent-500);
+	color: #0f172a;
+	box-shadow: 0 12px 30px rgba(14, 165, 165, 0.35);
+}
+
+body.satquml-modern .hero-btn.primary:hover
+{
+	transform: translateY(-2px);
+	box-shadow: 0 16px 34px rgba(14, 165, 165, 0.45);
+}
+
+body.satquml-modern .hero-btn.ghost
+{
+	background: rgba(248, 250, 252, 0.12);
+	color: #f8fafc;
+	border-color: rgba(248, 250, 252, 0.3);
+}
+
+body.satquml-modern .hero-btn.ghost:hover
+{
+	transform: translateY(-2px);
+	background: rgba(248, 250, 252, 0.22);
+}
+
+body.satquml-modern .hero-card
+{
+	background: var(--glass);
+	border-radius: 20px;
+	padding: 24px;
+	color: var(--ink-800);
+	box-shadow: var(--shadow-soft);
+	border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+body.satquml-modern .hero-card h3
+{
+	margin-top: 0;
+	font-size: 1.4rem;
+	color: var(--ink-900);
+}
+
+body.satquml-modern .hero-card .hero-list
+{
+	margin: 16px 0 20px;
+	display: grid;
+	grid-template-columns: 110px 1fr;
+	column-gap: 12px;
+	row-gap: 8px;
+	font-size: 0.95rem;
+}
+
+body.satquml-modern .hero-card .hero-list dt
+{
+	color: var(--slate-500);
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.78rem;
+	letter-spacing: 0.8px;
+	margin: 0;
+}
+
+body.satquml-modern .hero-card .hero-list dd
+{
+	margin: 0;
+}
+
+body.satquml-modern .hero-link
+{
+	display: inline-block;
+	font-weight: 600;
+	color: var(--accent-500);
+}
+
+body.satquml-modern section
+{
+	padding: 70px 0;
+}
+
+body.satquml-modern section::after
+{
+	content: "";
+	display: block;
+	height: 1px;
+	background: rgba(15, 23, 42, 0.08);
+	margin-top: 60px;
+}
+
+body.satquml-modern section:last-of-type::after
+{
+	display: none;
+}
+
+body.satquml-modern .section-heading
+{
+	font-size: clamp(2rem, 3vw, 2.8rem);
+	color: var(--ink-900);
+	margin-bottom: 22px;
+	text-align: left;
+}
+
+body.satquml-modern .section-subheading
+{
+	color: var(--slate-500);
+	font-style: normal;
+}
+
+body.satquml-modern .modern-list li
+{
+	list-style: none;
+	background: #ffffff;
+	border-radius: 14px;
+	padding: 16px 20px;
+	margin-bottom: 14px;
+	border: 1px solid rgba(15, 23, 42, 0.08);
+	box-shadow: var(--shadow-tight);
+}
+
+body.satquml-modern .modern-list
+{
+	padding-left: 0;
+	margin: 0;
+}
+
+body.satquml-modern .modern-list.compact li
+{
+	background: rgba(255, 255, 255, 0.92);
+	box-shadow: none;
+	border: 1px solid rgba(15, 23, 42, 0.1);
+	padding: 12px 16px;
+}
+
+body.satquml-modern .scope-box
+{
+	background: #ffffff;
+	border-radius: 16px;
+	padding: 22px 26px;
+	border: 1px solid rgba(15, 23, 42, 0.1);
+	box-shadow: var(--shadow-tight);
+
+}
+
+body.satquml-modern .scope-list
+{
+	margin: 0;
+	padding-left: 20px;
+	color: var(--ink-800);
+}
+
+body.satquml-modern .scope-list li
+{
+	margin-bottom: 12px;
+}
+
+body.satquml-modern .scope-list li:last-child
+{
+	margin-bottom: 0;
+}
+
+body.satquml-modern .key-dates-box
+{
+	background: #ffffff;
+	border-radius: 16px;
+	padding: 20px 26px;
+	border: 1px solid rgba(15, 23, 42, 0.1);
+	box-shadow: var(--shadow-tight);
+	margin-bottom: 10px;
+}
+
+body.satquml-modern .key-dates-list
+{
+	margin: 0;
+	padding-left: 18px;
+}
+
+body.satquml-modern .key-dates-list li
+{
+	margin-bottom: 10px;
+}
+
+body.satquml-modern .key-dates-list li:last-child
+{
+	margin-bottom: 0;
+}
+
+body.satquml-modern #program .text-muted
+{
+	text-align: left;
+	color: var(--slate-500);
+}
+
+body.satquml-modern #program .table
+{
+	border-collapse: separate;
+	border-spacing: 0 12px;
+}
+
+body.satquml-modern #program .table td
+{
+	border: none;
+	background: #ffffff;
+	box-shadow: var(--shadow-tight);
+}
+
+body.satquml-modern #program .table td:first-child
+{
+	border-radius: 14px 0 0 14px;
+	font-weight: 600;
+	color: var(--ink-900);
+}
+
+body.satquml-modern #program .table td:last-child
+{
+	border-radius: 0 14px 14px 0;
+}
+
+body.satquml-modern .team-member
+{
+	background: #ffffff;
+	border-radius: 16px;
+	padding: 18px 16px 20px;
+	border: 1px solid rgba(15, 23, 42, 0.08);
+	box-shadow: var(--shadow-tight);
+}
+
+body.satquml-modern .team-member img
+{
+	border: 4px solid rgba(14, 165, 165, 0.2);
+	box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15);
+}
+
+body.satquml-modern .speakers-grid,
+body.satquml-modern .organizers-grid
+{
+	gap: 24px;
+}
+
+@media (max-width: 992px)
+{
+	body.satquml-modern header.hero
+	{
+		padding: 120px 0 80px;
+	}
+}
+
+@media (max-width: 768px)
+{
+	body.satquml-modern
+	{
+		background-attachment: scroll;
+	}
+
+	body.satquml-modern .hero-actions
+	{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	body.satquml-modern .modern-list li
+	{
+		padding: 14px 16px;
+	}
+}

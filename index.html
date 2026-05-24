@@ -3,7 +3,13 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="icon" type="image/svg+xml" href="files_new/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#0f172a">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +24,11 @@
     <!-- Custom CSS -->
     <link href="./files_new/agency.css" rel="stylesheet">
 
+    <!-- Modern Typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;700&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="./files_new/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="./files_new/css" rel="stylesheet" type="text/css">
@@ -28,7 +39,7 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index satquml-modern">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
         <div class="container">
@@ -104,145 +115,19 @@
     </nav>
 
     <!-- Header -->
-    <header>
-        <style>
-            header {
-                background-image: url(img/satquml-background.png);
-                background-size: cover;
-                background-position: center;
-                color: #fff;
-                text-align: center;
-                padding: 20px 0;
-                position: relative;
-            }
-
-            /* Add a dark overlay to improve text readability */
-            header::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.4);
-                /* Semi-transparent dark overlay */
-                z-index: 1;
-            }
-
-            .container {
-                position: relative;
-                z-index: 2;
-                /* Place content above the overlay */
-            }
-
-            .intro-heading,
-            .intro-lead-in {
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            }
-
-            .intro-heading {
-                font-size: 3.5em;
-                font-weight: bold;
-                margin-bottom: 20px;
-                letter-spacing: 1px;
-            }
-
-            .intro-lead-in {
-                font-size: 1.8em;
-                margin-bottom: 15px;
-            }
-
-            header {
-                padding: 0px 0 0px 0;
-                /* Increase top padding */
-            }
-
-            .buttons {
-                position: absolute;
-                bottom: -20px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 3;
-                /* Ensure button stays above overlay */
-            }
-
-            .btn {
-                margin: 15px 5px;
-                padding: 12px 24px;
-                color: #fff;
-                background-color: rgba(255, 255, 255, 0.15);
-                border: 2px solid rgba(255, 255, 255, 0.8);
-                border-radius: 5px;
-                text-decoration: none;
-                transition: all 0.3s ease;
-                display: inline-block;
-                backdrop-filter: blur(5px);
-            }
-
-            .btn:hover {
-                background-color: rgba(255, 255, 255, 0.3);
-                transform: translateY(-2px);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-
-            section {
-                position: relative;
-                padding: 40px 0;
-                /* Reduce padding from default */
-                margin: 0;
-            }
-
-            /* Add horizontal line between sections */
-            section:not(:last-child)::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0%;
-                right: 0%;
-                height: 1px;
-                background: #e0e0e0;
-            }
-
-            /* Reduce space between section heading and content */
-            .section-heading {
-                margin-bottom: 20px !important;
-            }
-
-            .intro-subtitle {
-                font-size: 22px;
-            }
-
-            .intro-title {
-                font-size: 48px;
-            }
-
-            /* Adjust spacing in specific sections */
-            #news,
-            #introduction,
-            #call,
-            #dates,
-            #program,
-            #speaker,
-            #organization {
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
-        </style>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-heading">
-                    <div class="intro-subtitle">NeurIPS 2026 Workshop</div>
-                    <div class="intro-title">SaTQuML: Secure and Trustworthy Quantum Machine Learning</div>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-badge">NeurIPS 2026 Workshop</span>
+                <h1 class="hero-title">SaTQuML: Secure and Trustworthy Quantum Machine Learning</h1>
+                <div class="hero-contact">Contact: <a href="mailto:SaTQuML@gmail.com">SaTQuML@gmail.com</a></div>
+                <div class="hero-actions">
+                    <a class="hero-btn primary" href="#call">Call for Papers</a>
+                    <a class="hero-btn ghost" href="#program">View Schedule</a>
                 </div>
-                <!-- <div class="intro-lead-in">Dec 6, 2026</div> -->
-                <div class="intro-lead-in">Contact: <a href="mailto:SaTQuML@gmail.com"
-                        style="color: white;">SaTQuML@gmail.com</a></div>
-                <!-- <div class="intro-lead-in">The workshop will be held in a hybrid format.</div> -->
             </div>
-
         </div>
     </header>
-    <br><br><br><br>
 
     <!-- News Section -->
     <section id="news">
@@ -255,8 +140,7 @@
             </div>
             <div class="row text-justify">
                 <div class="col-md-12">
-                    <p class="large text-muted">
-                    <ul class="large text-muted" style="float:left; width: 100%">
+                    <ul class="large text-muted modern-list">
                         <!-- <li>
                             <span style="font-weight: bold;">Best Paper:</span> M1: Towards Scalable Test-Time Compute
                             with Mamba Reasoning Models, Junxiong Wang, Wen-Ding Li, Daniele Paliotta, Daniel Ritter,
@@ -289,13 +173,15 @@
                                 href="https://forms.gle/v1ihHMfbGdBggN5X6">
                                 application form</a> to join us. -->
                         <li>
-                            <span style="font-weight: bold;">Call for papers will be available here.
-                                <!-- :</span> Submission portal open at <a
+                            <span style="font-weight: bold;">Call for papers will be available here.</span>
+                            <!-- Submission portal open at <a
                                 href="https://openreview.net/group?id=NeurIPS.cc/2025/Workshop/ER">
                                 OpenReview</a> -->
                         </li>
-                        </p>
+                    </ul>
                 </div>
+            </div>
+        </div>
     </section>
 
     <!-- Introduction Section -->
@@ -380,7 +266,7 @@
                         </p>
 
                         <p>
-                            This topic is timely because QML is entering an important transition period.
+                            QML is entering an important transition period.
                             Academic research groups and industry platforms are making hybrid
                             quantum-classical experimentation increasingly accessible through open-source
                             software, simulators, cloud-based access to quantum computers, and early
@@ -507,27 +393,27 @@
                                 researchers focused on the ...
                             </p>
 
-                            <div style="font-family: system-ui, -apple-system, sans-serif;">
+                            <div>
                                 <h1
-                                    style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
+                                    style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
                                     Key Dates</h1>
 
-                                <ul class="large text-muted" style="float:left; width: 100%">
-                                    <li style="margin-bottom: 0rem;">
-                                        <span style="font-weight: bold;">Paper Submission
-                                            Open:</span> MM DD, 2026
-                                    </li>
-                                    <li style="margin-bottom: 0rem;">
-                                        <span style="font-weight: bold;">Paper Submission Deadline:</span>
-                                        <!-- <span
-                                            style="text-decoration: line-through;  text-decoration-thickness: 2px;">
-                                            MM DD, 2026 (AoE) </span>,  -->
-                                        MM DD, 2026 (AoE)
-                                    </li>
-                                    <li style="margin-bottom: 0rem;">
-                                        <span style="font-weight: bold;">Paper Notification :</span>MM
-                                        DD, 2026 (AoE)
-                                    </li>
+                                <div class="key-dates-box">
+                                    <ul class="large text-muted key-dates-list">
+                                        <li>
+                                            <span style="font-weight: bold;">Paper Submission Open:</span> MM DD, 2026
+                                        </li>
+                                        <li>
+                                            <span style="font-weight: bold;">Paper Submission Deadline:</span>
+                                            <!-- <span
+                                                style="text-decoration: line-through;  text-decoration-thickness: 2px;">
+                                                MM DD, 2026 (AoE) </span>,  -->
+                                            MM DD, 2026 (AoE)
+                                        </li>
+                                        <li>
+                                            <span style="font-weight: bold;">Paper Notification :</span>MM
+                                            DD, 2026 (AoE)
+                                        </li>
                                     <!-- <li style="margin-bottom: 0rem;">
                                         <span style="font-weight: bold;">Second Round Submission Open:</span> September
                                         18, 2025 (AoE)
@@ -540,14 +426,15 @@
                                         <span style="font-weight: bold;">Second Round Notification Deadline:</span>
                                         October 15, 2025 (AoE)
                                     </li> -->
-                                    <li style="margin-bottom: 0rem;">
-                                        <span style="font-weight: bold;">Review Deadline:</span> MM DD, 2026 (AoE)
-                                    </li>
-                                    <li style="margin-bottom: 0rem;">
-                                        <span style="font-weight: bold;">Camera-ready Version Deadline:</span>
-                                        MM DD, 2026
-                                    </li>
-                                </ul>
+                                        <li>
+                                            <span style="font-weight: bold;">Review Deadline:</span> MM DD, 2026 (AoE)
+                                        </li>
+                                        <li>
+                                            <span style="font-weight: bold;">Camera-ready Version Deadline:</span>
+                                            MM DD, 2026
+                                        </li>
+                                    </ul>
+                                </div>
                                 <!-- <p style="margin-top: 1rem; line-height: 1.5; color: #666; font-style: italic;">
                                     <strong>Note:</strong>We have introduced a second submission round to accommodate
                                     researchers who may prefer to submit after the ICLR 2026 deadline. However, if you
@@ -555,9 +442,9 @@
                                 </p> -->
                             </div>
 
-                            <div style="font-family: system-ui, -apple-system, sans-serif;">
+                            <div>
                                 <h1
-                                    style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
+                                    style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
                                     Submission Site</h1>
 
                                 <p class="large text-muted">
@@ -568,54 +455,53 @@
                                         Submission Portal
                                     </a>on OpenReview. -->
                                 </p>
-                                <div style="font-family: system-ui, -apple-system, sans-serif;">
+                                <div>
 
                                     <h1
-                                        style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
+                                        style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
                                         Scope</h1>
 
                                     <p class="large text-muted">We welcome contributions across a broad spectrum of
                                         topics, including but not limited to:</p>
 
-                                    <ul class="large text-muted" style="float:left; width: 100%">
-                                        <li>Security and trustworthiness of QML systems, including robustness, privacy,
-                                            fairness, reliability,
-                                            interpretability, and model leakage.</li>
+                                    <div class="scope-box">
+                                        <ul class="large text-muted scope-list">
+                                            <li><strong>Security and trustworthiness</strong> of QML systems, including
+                                                robustness, privacy, fairness, reliability, interpretability, and model
+                                                leakage.</li>
 
-                                        <li>Adversarial evaluation of QML, including perturbation, poisoning, evasion,
-                                            extraction, quantum noise, and
-                                            distribution-shift settings.</li>
+                                            <li><strong>Adversarial evaluation</strong> of QML, including perturbation,
+                                                poisoning, evasion, extraction, quantum noise, and distribution-shift
+                                                settings.</li>
 
-                                        <li>QML methods for security-sensitive learning, including quantum kernels,
-                                            variational quantum circuits, quantum
-                                            neural networks, quantum-inspired learning, and hybrid quantum-classical
-                                            models.</li>
+                                            <li><strong>Security-sensitive learning</strong> methods, including quantum
+                                                kernels, variational quantum circuits, quantum neural networks,
+                                                quantum-inspired learning, and hybrid quantum-classical models.</li>
 
-                                        <li>Benchmarking and reproducibility for QML, including realistic datasets,
-                                            strong classical, quantum, and
-                                            quantum-inspired baselines, ablations, and hardware-aware evaluation.</li>
+                                            <li><strong>Benchmarking and reproducibility</strong>, including realistic
+                                                datasets, strong classical, quantum, and quantum-inspired baselines,
+                                                ablations, and hardware-aware evaluation.</li>
 
-                                        <li>QML and hybrid quantum-classical models for cyberdefense tasks such as
-                                            intrusion detection, anomaly detection,
-                                            malware analysis, phishing and fraud detection, cyber-physical security, and
-                                            threat intelligence.</li>
+                                            <li><strong>Cyberdefense applications</strong> such as intrusion detection,
+                                                anomaly detection, malware analysis, phishing and fraud detection,
+                                                cyber-physical security, and threat intelligence.</li>
 
-                                        <li>Evaluation of the practical utility and limitations of QML, including
-                                            studies identifying when QML is useful,
-                                            limited, or unlikely to improve over classical methods.</li>
+                                            <li><strong>Practical utility and limitations</strong> of QML, including
+                                                studies identifying when QML is useful, limited, or unlikely to improve
+                                                over classical methods.</li>
 
-                                        <li>Secure deployment of QML pipelines in cloud, edge, quantum-cloud, and hybrid
-                                            computing environments.</li>
+                                            <li><strong>Secure deployment</strong> of QML pipelines in cloud, edge,
+                                                quantum-cloud, and hybrid computing environments.</li>
 
-                                        <li>Quantum-era security considerations for QML, including post-quantum
-                                            cyberdefense, quantum-network security,
-                                            secure quantum computing, and trustworthy AI methods for quantum and hybrid
-                                            models.</li>
-                                    </ul>
+                                            <li><strong>Quantum-era security</strong>, including post-quantum
+                                                cyberdefense, quantum-network security, secure quantum computing, and
+                                                trustworthy AI methods for quantum and hybrid models.</li>
+                                        </ul>
+                                    </div>
 
-                                    <div style="font-family: system-ui, -apple-system, sans-serif;">
+                                    <div>
                                         <h1
-                                            style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
+                                            style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
                                             Submission Guidelines</h1>
                                         <p class="large text-muted">
                                             <mybold>Format:</mybold> &nbsp;All submissions must be a single PDF file. We
@@ -1464,6 +1350,36 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="./files_new/agency.js"></script>
+
+    <script>
+        (function () {
+            var links = document.querySelectorAll('a[href]');
+            for (var i = 0; i < links.length; i++) {
+                var href = links[i].getAttribute('href');
+                if (!href) {
+                    continue;
+                }
+                var trimmed = href.trim();
+                if (!trimmed || trimmed.charAt(0) === '#') {
+                    continue;
+                }
+                if (/^javascript:/i.test(trimmed) || /^(mailto|tel):/i.test(trimmed)) {
+                    continue;
+                }
+                if (!links[i].getAttribute('target')) {
+                    links[i].setAttribute('target', '_blank');
+                }
+                var rel = links[i].getAttribute('rel') || '';
+                if (rel.indexOf('noopener') === -1) {
+                    rel += (rel ? ' ' : '') + 'noopener';
+                }
+                if (rel.indexOf('noreferrer') === -1) {
+                    rel += (rel ? ' ' : '') + 'noreferrer';
+                }
+                links[i].setAttribute('rel', rel);
+            }
+        })();
+    </script>
 
 
     <!-- Sponsors Section -->

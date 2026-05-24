@@ -638,6 +638,36 @@ In the era of AI-driven transformations, foundation models (FMs), like large-sca
     <!-- Custom Theme JavaScript -->
     <script src="./files_new/agency.js"></script>
 
+    <script>
+        (function () {
+            var links = document.querySelectorAll('a[href]');
+            for (var i = 0; i < links.length; i++) {
+                var href = links[i].getAttribute('href');
+                if (!href) {
+                    continue;
+                }
+                var trimmed = href.trim();
+                if (!trimmed || trimmed.charAt(0) === '#') {
+                    continue;
+                }
+                if (/^javascript:/i.test(trimmed) || /^(mailto|tel):/i.test(trimmed)) {
+                    continue;
+                }
+                if (!links[i].getAttribute('target')) {
+                    links[i].setAttribute('target', '_blank');
+                }
+                var rel = links[i].getAttribute('rel') || '';
+                if (rel.indexOf('noopener') === -1) {
+                    rel += (rel ? ' ' : '') + 'noopener';
+                }
+                if (rel.indexOf('noreferrer') === -1) {
+                    rel += (rel ? ' ' : '') + 'noreferrer';
+                }
+                links[i].setAttribute('rel', rel);
+            }
+        })();
+    </script>
+
 
 
 
