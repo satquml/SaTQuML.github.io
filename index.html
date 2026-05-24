@@ -84,19 +84,15 @@
                         <li>
                             <a class="page-scroll" href="#organization">Organizers</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="page-scroll" href="#Social Event">Social Event</a>
-                        </li>
+                        </li> -->
                         <li>
                             <!--<li>
                             <a class="page-scroll" href="#contactt">Contact</a>
                         </li>-->
                         </li>
                         <li>
-
-                            <!-- <li>
-                        <a class="buttom" href="index_2020.html">TSW 2020</a>
-                    </li> -->
 
                         </li>
                     </ul>
@@ -111,7 +107,7 @@
     <header>
         <style>
             header {
-                background-image: url(img/480711-Coronado-Ferry-Landing.webp);
+                background-image: url(img/satquml-background.png);
                 background-size: cover;
                 background-position: center;
                 color: #fff;
@@ -310,6 +306,8 @@
                     <h2 class="section-heading">About</h2>
                     <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
                 </div>
+
+
             </div>
             <div class="row text-justify">
                 <style>
@@ -360,11 +358,90 @@
                     }
                 </style>
                 <div class="overview-section">
-                    <div class="intro-text">
+                    <div class="intro-text" style="font-size: 16pt; line-height: 1.85;">
+                        <p>
+                            <strong>SaTQuML: Secure and Trustworthy Quantum Machine Learning</strong>
+                            brings together researchers working at the intersection of quantum machine
+                            learning (QML), cybersecurity, trustworthy AI, quantum security, and
+                            cyberdefense. As QML moves toward practical testing on hybrid
+                            quantum-classical platforms, its use in security-sensitive settings must be
+                            guided by clear benchmarks, realistic threat models, strong baselines, and
+                            careful evaluation.
+                        </p>
 
+                        <p>
+                            The workshop focuses on two connected themes. The first is the security and
+                            trustworthiness of QML systems themselves, including robustness, privacy,
+                            reliability, interpretability, deployment risks, model leakage, and behavior
+                            under noisy hardware conditions. The second is the use of QML and hybrid
+                            quantum-classical methods for cyberdefense and related security applications,
+                            including anomaly detection, malware analysis, intrusion detection,
+                            vulnerability prioritization, cyber-physical security, and threat intelligence.
+                        </p>
+
+                        <p>
+                            This topic is timely because QML is entering an important transition period.
+                            Academic research groups and industry platforms are making hybrid
+                            quantum-classical experimentation increasingly accessible through open-source
+                            software, simulators, cloud-based access to quantum computers, and early
+                            application-driven demonstrations. This creates a need to evaluate QML beyond
+                            expressivity, trainability, and quantum-advantage claims, with attention to
+                            realistic data, reproducibility, robustness, privacy, security, and deployment
+                            constraints.
+                        </p>
+
+                        <p>
+                            SaTQuML emphasizes rigorous evaluation over speculative claims. Its central
+                            goal is to help define meaningful research problems, strong classical and
+                            quantum baselines, realistic threat models, reproducible benchmarks, and
+                            shared best practices for secure and trustworthy QML systems in
+                            security-critical settings.
+                        </p>
                     </div>
-
                     <h3 style="color: #2d3748; margin: 30px 0 20px;">Key Problems We Aim to Address</h3>
+
+                    <div class="questions-grid">
+                        <div class="question-card">
+                            <div class="question-title">Trustworthy QML Systems</div>
+                            <div class="question-content">
+                                Define how quantum machine learning systems should be evaluated for security,
+                                robustness, privacy, reliability, interpretability, and model leakage. Contributions
+                                may study how QML models behave under noisy hardware, limited data, adversarial
+                                manipulation, and distribution shift.
+                            </div>
+                        </div>
+
+                        <div class="question-card">
+                            <div class="question-title">Benchmarks and Evaluation</div>
+                            <div class="question-content">
+                                Develop realistic benchmarks, datasets, threat models, and evaluation protocols for
+                                secure and trustworthy QML. Contributions may compare QML methods against strong
+                                classical, quantum, and quantum-inspired baselines, including negative results and
+                                studies showing when QML is useful, limited, or unlikely to help.
+                            </div>
+                        </div>
+
+                        <div class="question-card">
+                            <div class="question-title">Cyberdefense Applications</div>
+                            <div class="question-content">
+                                Explore QML and hybrid quantum-classical models for cyberdefense tasks such as
+                                intrusion detection, anomaly detection, malware analysis, phishing and fraud
+                                detection, vulnerability prioritization, cyber-physical security, and threat
+                                intelligence.
+                            </div>
+                        </div>
+
+                        <div class="question-card">
+                            <div class="question-title">Secure Deployment</div>
+                            <div class="question-content">
+                                Study how QML pipelines can be securely trained, deployed, and accessed in cloud,
+                                edge, quantum-cloud, and hybrid computing environments. Contributions may address
+                                deployment risks, quantum-cloud access, secure quantum computing, quantum-network
+                                security, and post-quantum cyberdefense.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <h3 style="color: #2d3748; margin: 30px 0 20px;">Key Problems We Aim to Address</h3>
 
                     <div class="questions-grid">
                         <div class="question-card">
@@ -405,7 +482,7 @@
                                 on-orbit autonomy.
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -492,6 +569,7 @@
                                     </a>on OpenReview. -->
                                 </p>
                                 <div style="font-family: system-ui, -apple-system, sans-serif;">
+
                                     <h1
                                         style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
                                         Scope</h1>
@@ -500,56 +578,64 @@
                                         topics, including but not limited to:</p>
 
                                     <ul class="large text-muted" style="float:left; width: 100%">
-                                        <li>Pipelines for creating high-quality training data with resource constraints
-                                            or deployment environments.</li>
-                                        <li>Benchmark methodologies for assessing the efficiency and efficacy of LRMs in
-                                            real-world settings</li>
-                                        <li>Innovations in techniques for training LRMs with a better trade-off between
-                                            efficiency and performance</li>
-                                        <li>Approaches for accelerating LRM inference through the design of algorithms
-                                            and systems</li>
-                                        <li>Advancements in improving the reasoning and planning abilities of LRMs in
-                                            diverse tasks</li>
-                                        <li>Theoretical analysis of the time and space complexity of LRMs on synthetic
-                                            and realistic tasks.</li>
-                                        <li>Empirical investigations into the practical efficiency (i.e., latency and
-                                            throughput) of LRMs</li>
-                                        <li>Implementations to efficiently enable large-scale RL training systems or
-                                            on-device inference engines</li>
-                                        <li>Strategies for overcoming practical limitations (e.g., memory, time, data)
-                                            of LRMs</li>
-                                        <li>In-depth discussions exploring the efficient deployments and applications of
-                                            LRMs</li>
+                                        <li>Security and trustworthiness of QML systems, including robustness, privacy,
+                                            fairness, reliability,
+                                            interpretability, and model leakage.</li>
+
+                                        <li>Adversarial evaluation of QML, including perturbation, poisoning, evasion,
+                                            extraction, quantum noise, and
+                                            distribution-shift settings.</li>
+
+                                        <li>QML methods for security-sensitive learning, including quantum kernels,
+                                            variational quantum circuits, quantum
+                                            neural networks, quantum-inspired learning, and hybrid quantum-classical
+                                            models.</li>
+
+                                        <li>Benchmarking and reproducibility for QML, including realistic datasets,
+                                            strong classical, quantum, and
+                                            quantum-inspired baselines, ablations, and hardware-aware evaluation.</li>
+
+                                        <li>QML and hybrid quantum-classical models for cyberdefense tasks such as
+                                            intrusion detection, anomaly detection,
+                                            malware analysis, phishing and fraud detection, cyber-physical security, and
+                                            threat intelligence.</li>
+
+                                        <li>Evaluation of the practical utility and limitations of QML, including
+                                            studies identifying when QML is useful,
+                                            limited, or unlikely to improve over classical methods.</li>
+
+                                        <li>Secure deployment of QML pipelines in cloud, edge, quantum-cloud, and hybrid
+                                            computing environments.</li>
+
+                                        <li>Quantum-era security considerations for QML, including post-quantum
+                                            cyberdefense, quantum-network security,
+                                            secure quantum computing, and trustworthy AI methods for quantum and hybrid
+                                            models.</li>
                                     </ul>
+
                                     <div style="font-family: system-ui, -apple-system, sans-serif;">
                                         <h1
                                             style="font-family: 'Georgia', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
                                             Submission Guidelines</h1>
                                         <p class="large text-muted">
                                             <mybold>Format:</mybold> &nbsp;All submissions must be a single PDF file. We
-                                            welcome high-quality original papers up to 4 pages, including both long and
+                                            welcome high-quality original papers up to 9 pages, including both long and
                                             short papers.
                                             References and appendices are not included in the page limit, but the main
                                             text must be self-contained. Reviewers are not required to read beyond the
-                                            main text
-
-                                        <ul class="large text-muted" style="float:left; width: 100%">
-                                            <li>For the second track submissions, we open the page limit to 9 pages to
-                                                match ICLR paper pages for the authors' convenience .</li>
-                                        </ul>
+                                            main text.
                                         </p>
                                         <p class="large text-muted">
                                             <mybold>Style file:</mybold> &nbsp; You must format your submission using
-                                            the NeurIPS 2025
-                                            LaTeX style file. For your convenience, we modified all the conference style
-                                            files
-                                            to refer to our workshop: <a
-                                                href="https://SaTQuML.github.io/SaTQuML.zip">NeurIPS
-                                                2025 Style Files</a>. Please
+                                            the <a
+                                                href="https://www.overleaf.com/latex/templates/formatting-instructions-for-neurips-2026/bjdwqfdkyftc">NeurIPS
+                                                2026 </a> LaTeX style file. Please
                                             include the references and supplementary materials in the same PDF.
-                                            The maximum file size for submissions is 50MB. Submissions that violate the
+                                            The maximum file size for submissions is 50MB. Submissions that violate
+                                            the
                                             NeurIPS style
-                                            (e.g., by decreasing margins or font sizes) or page limits may be rejected
+                                            (e.g., by decreasing margins or font sizes) or page limits may be
+                                            rejected
                                             without
                                             further review.
                                         </p>
@@ -587,6 +673,16 @@
                                             policy will be
                                             rejected.
                                         </p>
+
+                                        <p class="large text-muted">
+                                            <mybold>Please be AWARE:</mybold> &nbsp; OpenReview's moderation policy for
+                                            newly created profiles in the Call for Papers: New profiles created without
+                                            an
+                                            institutional email will go through a moderation process that can take up to
+                                            two weeks. New profiles created with an
+                                            institutional email will be activated automatically.
+                                        </p>
+
                                         <p class="large text-muted">
                                             <mybold>Contact:</mybold> &nbsp; For any questions, please contact us at <a
                                                 href="mailto:SaTQuML@gmail.com">SaTQuML@gmail.com</a>
@@ -675,51 +771,49 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <td>08:00 - 08:45</td>
+                                <td>08:00 - 08:30</td>
                                 <td>Breakfast</td>
                             </tr>
                             <tr>
-                                <td>08:45 - 09:00</td>
+                                <td>08:30 - 08:45</td>
                                 <td>Introduction and Opening Remarks</td>
                             </tr>
                             <tr>
-                                <td>09:00 - 09:30</td>
-                                <td>Jonas Geiping: The Promise of Recurrent Depth for Efficient Reasoning</td>
+                                <td>08:45 - 09:30</td>
+                                <td>Keynote Talk 1: Swaroop Ghosh</td>
                             </tr>
                             <tr>
-                                <td>09:30 - 10:00</td>
-                                <td>Morning Break</td>
-                            </tr>
-                            <tr>
-                                <td>10:00 - 10:30</td>
-                                <td>Arman Cohan: Frameworks for Better Understanding Alignment Evaluation and Scientific
-                                    Reasoning in Large Language </td>
-                            </tr>
-                            <tr>
-                                <td>10:30 - 10:45</td>
-                                <td>Oral Paper Talk: M1: Towards Scalable Test-Time Compute with Mamba Reasoning Models
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>10:45 - 11:00</td>
-                                <td>Oral Paper Talk: Generalized Parallel Scaling with Interdependent Generations</td>
-                            </tr>
-                            <tr>
-                                <td>11:00 - 11:30</td>
-                                <td>Wei Xu: Beyond Logic and Math: Probabilistic Reasoning for Real-World Decision
-                                    Making</td>
-                            </tr>
-                            <tr>
-                                <td>11:30 - 12:00</td>
-                                <td>Wang Zhang: What's Now and Next for veRL?</td>
-                            </tr>
-                            <tr>
-                                <td>12:00 - 13:00</td>
+                                <td>09:30 - 09:40</td>
                                 <td>Break</td>
                             </tr>
                             <tr>
+                                <td>09:40 - 09:55</td>
+                                <td>Oral Paper Talk</td>
+                            </tr>
+                            <tr>
+                                <td>09:55 - 10:10</td>
+                                <td>Oral Paper Talk
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10:10 - 10:25</td>
+                                <td>Oral Paper Talk</td>
+                            </tr>
+                            <tr>
+                                <td>10:25 - 10:40</td>
+                                <td>Oral Paper Talk</td>
+                            </tr>
+                            <tr>
+                                <td>10:40 - 10:55</td>
+                                <td>Oral Paper Talk</td>
+                            </tr>
+                            <tr>
+                                <td>10:55 - 12:00</td>
+                                <td>Panel discussion</td>
+                            </tr>
+                            <tr>
                                 <td>12:00 - 13:00</td>
-                                <td>Poster Session 1</td>
+                                <td>Break and lunch</td>
                             </tr>
                         </tbody>
                     </table>
@@ -730,43 +824,44 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <td>13:00 - 13:30</td>
-                                <td>Yi Wu:AReaL: an Efficient and Flexible Framework for Agentic RL</td>
+                                <td>13:00 - 13:45</td>
+                                <td>Keynote Talk 2: Muhammad Usman</td>
                             </tr>
                             <tr>
-                                <td>13:30 - 14:00</td>
-                                <td>Yuandong Tian: open the blackbox of neural network and use the insights for
-                                    efficient reasoning</td>
+                                <td>13:45 - 14:00</td>
+                                <td>Break</td>
                             </tr>
                             <tr>
-                                <td>14:00 - 14:30</td>
-                                <td>Panel Discussion</td>
+                                <td>14:00 - 14:45</td>
+                                <td>Keynote Talk 3: Samuel Yen-Chi Chen</td>
                             </tr>
                             <tr>
-                                <td>14:30 - 15:00</td>
-                                <td>Hao Zhang: Reasoning with Confidence</td>
+                                <td>14:45 - 15:00</td>
+                                <td>Break</td>
                             </tr>
                             <tr>
-                                <td>15:00 - 15:30</td>
-                                <td>Niklas Muennighoff: Test-time scaling </td>
+                                <td>15:00 - 16:00</td>
+                                <td>Poster Session</td>
                             </tr>
                             <tr>
-                                <td>15:30 - 15:45</td>
-                                <td>Oral Paper Talk: When Reasoning Meets Its Laws</td>
+                                <td>16:00 - 16:10</td>
+                                <td>Break</td>
                             </tr>
                             <tr>
-                                <td>15:45 - 16:00</td>
-                                <td>Oral Paper Talk: In-the-Flow Agentic System Optimization for Effective Planning and
-                                    Tool Use</td>
+                                <td>16:10 - 16:25</td>
+                                <td>Oral Paper Talk</td>
                             </tr>
                             <tr>
-                                <td>16:00 - 16:30</td>
-                                <td>Beidi Chen: Beyong FLOPs: Opportunities and Challenges of Test-Time Scaling on
-                                    Modern Hardware </td>
+                                <td>16:25 - 16:40</td>
+                                <td>Oral Paper Talk</td>
                             </tr>
                             <tr>
-                                <td>16:30 - 17:30</td>
-                                <td>Poster Session 2</td>
+                                <td>16:40 - 16:55</td>
+                                <td>Oral Paper Talk</td>
+                            </tr>
+                            <tr>
+                                <td>16:55 - 17:15</td>
+                                <td>Award and Closing Remarks</td>
                             </tr>
                         </tbody>
                     </table>
@@ -845,7 +940,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 ">
-                    <h2 class="section-heading">Invited Speakers</h2>
+                    <h2 class="section-heading">Invited Keynote Speakers</h2>
                     <!-- <h3 class="section-subheading text-muted">>This is the tentative invited speakers. More speakers are invited.</h3> -->
                 </div>
             </div>
@@ -856,39 +951,32 @@
             <br>
 
             <div class="speakers-grid">
+
+                <div class="team-member">
+                    <img src="./img/swaroop-ghosh.jpg" class="img-responsive img-circle">
+                    <a href="https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=szg212">
+                        <h4>Swaroop Ghosh</h4>
+                    </a>
+                    <p class="text-muted">Pennsylvania State University</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./img/muhammad-usman.jpeg" class="img-responsive img-circle">
+                    <a href="https://www.quantumelectronics.org/pi">
+                        <h4>Muhammad Usman</h4>
+                    </a>
+                    <p class="text-muted">CSIRO</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./img/samuel-chen.jpeg" class="img-responsive img-circle">
+                    <a href="https://www.sycchen.com/">
+                        <h4>Samuel Yen-Chi Chen</h4>
+                    </a>
+                    <p class="text-muted">Wells Fargo</p>
+                </div>
+
                 <!-- <div class="team-member">
-                    <img src="./files_new/AA.jpeg" class="img-responsive img-circle">
-                    <a href="https://www.eas.caltech.edu/people/anima">
-                        <h4>Anima Anandkumar</h4>
-                    </a>
-                    <p class="text-muted">California Institute of Technology</p>
-                </div> -->
-
-                <div class="team-member">
-                    <img src="./files_new/BC.jpeg" class="img-responsive img-circle">
-                    <a href="https://www.andrew.cmu.edu/user/beidic/">
-                        <h4>Beidi Chen</h4>
-                    </a>
-                    <p class="text-muted">Carnegie Mellon University</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="./files_new/AC.jpeg" class="img-responsive img-circle">
-                    <a href="https://armancohan.com/">
-                        <h4>Arman Cohan </h4>
-                    </a>
-                    <p class="text-muted">Yale University</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="./files_new/JG.jpg" class="img-responsive img-circle">
-                    <a href="https://jonasgeiping.github.io/">
-                        <h4>Jonas Geiping</h4>
-                    </a>
-                    <p class="text-muted">ELLIS Institute</p>
-                </div>
-
-                <div class="team-member">
                     <img src="./files_new/NM.png" class="img-responsive img-circle">
                     <a href="https://muennighoff.github.io/">
                         <h4>Niklas Muennighoff</h4>
@@ -910,9 +998,9 @@
                         <h4>Wei Xu</h4>
                     </a>
                     <p class="text-muted">Georgia Institute of Technology</p>
-                </div>
+                </div> -->
 
-                <div class="team-member">
+                <!-- <div class="team-member">
                     <img src="./files_new/YW.jpg" class="img-responsive img-circle">
                     <a href="https://jxwuyi.weebly.com/">
                         <h4>Yi Wu</h4>
@@ -934,7 +1022,7 @@
                         <h4>Wang Zhang</h4>
                     </a>
                     <p class="text-muted">ByteDance Seed</p>
-                </div>
+                </div> -->
                 <!--<div class="team-member">
                     <img src="./files_new/CX.png" class="img-responsive img-circle">
                     <a href="http://cmxiong.com">
@@ -969,7 +1057,7 @@
 
             <div class="speakers-grid">
 
-                <div class="team-member">
+                <!-- <div class="team-member">
                     <img src="./files_new/yuandong.png" class="img-responsive img-circle">
                     <a href="https://yuandong-tian.com/">
                         <h4>Yuandong Tian</h4>
@@ -984,10 +1072,10 @@
                         <h4>Ziyun Wei</h4>
                     </a>
                     <p class="text-muted">ByteDance Seed</p>
-                </div>
+                </div> -->
 
 
-                <div class="team-member">
+                <!-- <div class="team-member">
                     <img src="./files_new/prof_pic.jpeg" class="img-responsive img-circle">
                     <a href="https://renll.github.io/">
                         <h4>Liliang Ren</h4>
@@ -1002,7 +1090,7 @@
                         <h4>Jiawei Zhao</h4>
                     </a>
                     <p class="text-muted">Meta</p>
-                </div>
+                </div> -->
 
                 <!--<div class="team-member">
                     <img src="./files_new/CX.png" class="img-responsive img-circle">
@@ -1044,46 +1132,46 @@
             <br>
             <div class="organizers-grid">
                 <div class="team-member">
-                    <img src="./files_new/CL.jpg" class="img-responsive img-circle">
-                    <a href="https://wdlctc.github.io/">
-                        <h4>Cheng Luo</h4>
+                    <img src="./img/saidur-rahman.jpg" class="img-responsive img-circle">
+                    <a href="https://rahmanmsaidur.com/">
+                        <h4>Saidur Rahman</h4>
                     </a>
-                    <p class="text-muted">California Institute of Technology</p>
+                    <p class="text-muted">University of Texas at El Paso</p>
                 </div>
 
                 <div class="team-member">
-                    <img src="./files_new/XY.jpeg" class="img-responsive img-circle">
-                    <a href="https://xinyuyang.me/">
-                        <h4>Xinyu Yang</h4>
+                    <img src="./img/jakub-szefer.jpg" class="img-responsive img-circle">
+                    <a href="https://caslab.io/jakub/">
+                        <h4>Jakub Szefer</h4>
                     </a>
-                    <p class="text-muted">Carnegie Mellon University</p>
+                    <p class="text-muted">Northwestern University</p>
                 </div>
 
                 <div class="team-member">
-                    <img src="./files_new/SA.jpg" class="img-responsive img-circle">
-                    <a href="https://arorasimran.com/">
-                        <h4>Simran Arora</h4>
+                    <img src="./img/taqi-raza.jpg" class="img-responsive img-circle">
+                    <a href="https://people.umass.edu/taqi/">
+                        <h4>Taqi Raza</h4>
                     </a>
-                    <p class="text-muted">Stanford</p>
+                    <p class="text-muted">University of Massachusetts Amherst</p>
                 </div>
 
                 <div class="team-member">
-                    <img src="./files_new/WS.webp" class="img-responsive img-circle">
-                    <a href="https://weijiashi.notion.site/">
-                        <h4>Weijia Shi</h4>
+                    <img src="./img/khoa-luu.jpg" class="img-responsive img-circle">
+                    <a href="https://uark-cviu.github.io/">
+                        <h4>Khoa Luu</h4>
                     </a>
-                    <p class="text-muted">University of Washington</p>
+                    <p class="text-muted">University of Arkansas</p>
                 </div>
 
                 <div class="team-member">
-                    <img src="./files_new/HS.jpg" class="img-responsive img-circle">
-                    <a href="https://preminstrel.com/">
-                        <h4>Hanshi Sun</h4>
+                    <img src="./img/shahrooz-pouryousef.png" class="img-responsive img-circle">
+                    <a href="https://www.chalmers.se/en/persons/delezi/">
+                        <h4>Shahrooz Pouryousef</h4>
                     </a>
-                    <p class="text-muted">ByteDance Seed</p>
+                    <p class="text-muted">Chalmers University of Technology</p>
                 </div>
 
-                <div class="team-member">
+                <!-- <div class="team-member">
                     <img src="./files_new/SY.png" class="img-responsive img-circle">
                     <a href="https://sustcsonglin.github.io/">
                         <h4>Songlin Yang</h4>
@@ -1097,9 +1185,9 @@
                         <h4>Luca Zancato</h4>
                     </a>
                     <p class="text-muted">Amazon </p>
-                </div>
+                </div> -->
 
-                <div class="team-member">
+                <!-- <div class="team-member">
                     <img src="./files_new/JZ.webp" class="img-responsive img-circle">
                     <a href="https://jiawei-zhao.netlify.app/">
                         <h4>Jiawei Zhao</h4>
@@ -1113,11 +1201,8 @@
                         <h4>Rui-jie Zhu</h4>
                     </a>
                     <p class="text-muted">UC Santa Cruz</p>
-                </div>
+                </div> -->
             </div>
-
-
-
 
 
             <div class="container">
@@ -1138,6 +1223,9 @@
         </div>
         </div>
     </section>
+
+
+    <!--
     <section id="Social Event">
         <style>
             #Social\ Event {
@@ -1193,97 +1281,100 @@
             }
         </style>
 
+
+
         <div class="container">
             <h2 class="section-heading">Social Event</h2>
 
             <div class="social-container">
 
-                <!-- Image -->
-                <img src="img/Bayside-Trail3_1.webp" alt="Bayside Trail Tour">
+                
+    <img src="img/Bayside-Trail3_1.webp" alt="Bayside Trail Tour">
 
-                <!-- Text -->
-                <div class="social-details">
-                    <h3>Bayside Trail Tour</h3>
+   
+    <div class="social-details">
+        <h3>Bayside Trail Tour</h3>
 
-                    <p><span>Date:</span> 07 Dec 2025</p>
-                    <p>
-                        <span>Time:</span> 9:30–11:30
-                        <span style="color:red;">Please be there 15 minutes before departure</span>
-                    </p>
+        <p><span>Date:</span> 07 Dec 2025</p>
+        <p>
+            <span>Time:</span> 9:30–11:30
+            <span style="color:red;">Please be there 15 minutes before departure</span>
+        </p>
 
-                    <p>
-                        <span>Location:</span>
-                        <a href="https://maps.app.goo.gl/j8SoSzoPkTdFXjeW9" target="_blank">
-                            Cabrillo National Monument
-                        </a>
-                    </p>
+        <p>
+            <span>Location:</span>
+            <a href="https://maps.app.goo.gl/j8SoSzoPkTdFXjeW9" target="_blank">
+                Cabrillo National Monument
+            </a>
+        </p>
 
-                    <p>
-                        To reach the location from Chalmers Conference Centre, the our rental bus at the San Diego
-                        Convention Center and arrive after a 30-minute trip to Old Point Loma.
-                    </p>
+        <p>
+            To reach the location from Chalmers Conference Centre, the our rental bus at the San Diego
+            Convention Center and arrive after a 30-minute trip to Old Point Loma.
+        </p>
 
-                    <p>
-                        <span>Info:</span> The trail begins near the Old Point Loma Lighthouse. Look for the Bayside
-                        Trail sign just before you reach the lighthouse, directing you to the left. Follow the paved
-                        road, which eventually transitions to a gravel and dirt path. The walk is a self-guided tour
-                        with plenty of detailed signs that describe the sensitive vegetation, weather, habitat, animal
-                        life, and historical sites.
-                    </p>
+        <p>
+            <span>Info:</span> The trail begins near the Old Point Loma Lighthouse. Look for the Bayside
+            Trail sign just before you reach the lighthouse, directing you to the left. Follow the paved
+            road, which eventually transitions to a gravel and dirt path. The walk is a self-guided tour
+            with plenty of detailed signs that describe the sensitive vegetation, weather, habitat, animal
+            life, and historical sites.
+        </p>
 
-                    <p style="font-style: italic; color:#666;">
-                        Pre-registration is mandatory at <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSetckULGRewbfJ4OS2H4HiHdizR7beKIxtPo3Wi-Xfb_Iut-w/viewform?usp=publish-editor">Pre-registration
-                            form</a>. If you registered and cannot attend, please notify us as early as possible
-                        since we have a waiting list. Notice of absence can be sent to
-                        <a href="er.neurips2025@gmail.com">er.neurips2025@gmail.com</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <p style="font-style: italic; color:#666;">
+            Pre-registration is mandatory at <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSetckULGRewbfJ4OS2H4HiHdizR7beKIxtPo3Wi-Xfb_Iut-w/viewform?usp=publish-editor">Pre-registration
+                form</a>. If you registered and cannot attend, please notify us as early as possible
+            since we have a waiting list. Notice of absence can be sent to
+            <a href="er.neurips2025@gmail.com">er.neurips2025@gmail.com</a>.
+        </p>
+    </div>
+    </div>
+    </div>
 
 
-        <h2 class="section-heading"> </h2>
+    <h2 class="section-heading"> </h2>
 
-        <div class="social-container">
+    <div class="social-container">
 
-            <!-- Image -->
-            <img src="img/taco.webp" alt="Bayside Trail Tour">
+        
+    <img src="img/taco.webp" alt="Bayside Trail Tour">
 
-            <!-- Text -->
-            <div class="social-details">
-                <h3>Lunch & Dinner</h3>
+   
+    <div class="social-details">
+        <h3>Lunch & Dinner</h3>
 
-                <p><span>Date:</span> 02-06 Dec 2025</p>
-                <p>
-                    <span>Location:</span>
-                    <a href="https://www.google.com/maps/place/San+Diego+Convention+Center/@32.7055022,-117.1626777,16z/data=!3m1!4b1!4m6!3m5!1s0x80d953574be55d8b:0x568846370a748ca5!8m2!3d32.7054977!4d-117.1601028!16zL20vMDMzdjNz?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
-                        target="_blank">
-                        San Diego Convention Center
-                    </a>
-                </p>
+        <p><span>Date:</span> 02-06 Dec 2025</p>
+        <p>
+            <span>Location:</span>
+            <a href="https://www.google.com/maps/place/San+Diego+Convention+Center/@32.7055022,-117.1626777,16z/data=!3m1!4b1!4m6!3m5!1s0x80d953574be55d8b:0x568846370a748ca5!8m2!3d32.7054977!4d-117.1601028!16zL20vMDMzdjNz?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank">
+                San Diego Convention Center
+            </a>
+        </p>
 
-                <p>
-                    Join us for lunch partys from 02-05 Dec 2025 to meet speakers, organizers, and other attendees.
-                    Free Taco from <a href="https://www.letstaco.com/" target="_blank">
-                        Taco Stand
-                    </a> will be provided. Feel free to bring your own lunch as well.
-                </p>
+        <p>
+            Join us for lunch partys from 02-05 Dec 2025 to meet speakers, organizers, and other attendees.
+            Free Taco from <a href="https://www.letstaco.com/" target="_blank">
+                Taco Stand
+            </a> will be provided. Feel free to bring your own lunch as well.
+        </p>
 
-                <p>
-                    Join us for dinner partys on 06 Dec 2025 to meet speakers, organizers, and other attendees.
-                </p>
-                <p>
-                    <span>Info:</span> Seating is limited. Please join our <a
-                        href="https://join.slack.com/t/efficientreas-k5g4183/shared_invite/zt-3jm1vdto1-vZL7n5QJFiC8EDEuyzhjpA"
-                        target="_blank">
-                        slack
-                    </a> for group orders
-                </p>
+        <p>
+            Join us for dinner partys on 06 Dec 2025 to meet speakers, organizers, and other attendees.
+        </p>
+        <p>
+            <span>Info:</span> Seating is limited. Please join our <a
+                href="https://join.slack.com/t/efficientreas-k5g4183/shared_invite/zt-3jm1vdto1-vZL7n5QJFiC8EDEuyzhjpA"
+                target="_blank">
+                slack
+            </a> for group orders
+        </p>
 
-            </div>
-        </div>
+    </div>
+    </div>
     </section>
+    -->
 
     <!-- <section id="sponsor">
         <div class="container">
@@ -1412,7 +1503,8 @@
 
         <div class="container">
             <h2 class="section-heading">Workshop Sponsors</h2>
-            <div class="sponsor-logos">、
+
+            <!-- <div class="sponsor-logos">、
                 <a href="https://sig.com/" target="_blank">
                     <img src="./files_new/sig.png" alt="Susquehanna">
                 </a>
@@ -1422,7 +1514,7 @@
                 <a href="https://www.tencent.com/" target="_blank">
                     <img src="./files_new/tencent.png" alt="Tencent">
                 </a>
-            </div>
+            </div> -->
         </div>
     </section>
 
