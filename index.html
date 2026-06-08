@@ -745,41 +745,95 @@
             /* Speakers Grid - 4x2 */
             .speakers-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+                grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
                 justify-content: center;
-                gap: 16px;
+                justify-items: center;
+                gap: 14px;
                 width: 100%;
-                padding: 0 20px;
+                padding: 0 12px;
             }
 
             .speakers-grid .team-member {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                max-width: 230px;
+                padding: 12px 14px 14px;
+                min-height: 250px;
+                background: #ffffff;
+                border: 1px solid #e5e7eb;
+                border-radius: 16px;
+                box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
                 text-align: center;
             }
 
             .speakers-grid .team-member img {
                 width: 150px;
                 height: 150px;
-                margin: 0 auto;
+                margin: 0 auto 10px;
+            }
+
+            .speakers-grid .team-member h4,
+            .speakers-grid .team-member p {
+                margin: 0;
+            }
+
+            .speakers-grid .team-member h4 {
+                margin-top: 6px;
+                margin-bottom: 4px;
+            }
+
+            .speakers-grid .team-member p {
+                line-height: 1.2;
             }
 
             /* Organizers Grid - 5x3 */
             .organizers-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+                grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
                 justify-content: center;
-                gap: 16px;
+                justify-items: center;
+                gap: 14px;
                 width: 100%;
-                padding: 0 20px;
+                padding: 0 12px;
             }
 
             .organizers-grid .team-member {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                max-width: 230px;
+                padding: 12px 14px 14px;
+                min-height: 250px;
+                background: #ffffff;
+                border: 1px solid #e5e7eb;
+                border-radius: 16px;
+                box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
                 text-align: center;
             }
 
             .organizers-grid .team-member img {
                 width: 150px;
                 height: 150px;
-                margin: 0 auto;
+                margin: 0 auto 10px;
+            }
+
+            .organizers-grid .team-member h4,
+            .organizers-grid .team-member p {
+                margin: 0;
+            }
+
+            .organizers-grid .team-member h4 {
+                margin-top: 6px;
+                margin-bottom: 4px;
+            }
+
+            .organizers-grid .team-member p {
+                line-height: 1.2;
             }
 
             /* Keep circular images */
@@ -843,6 +897,14 @@
                         <h4>Juan Cruz-Benito</h4>
                     </a>
                     <p class="text-muted">IBM Quantum and IBM Research</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./img/soohyun-park.jpg" alt="Soohyun Park" class="img-responsive img-circle">
+                    <a href="https://sites.google.com/view/dpslab-smwu/prof-soohyun-park?authuser=0">
+                        <h4>Soohyun Park</h4>
+                    </a>
+                    <p class="text-muted">Sookmyung Women's University</p>
                 </div>
 
                 <!-- <div class="team-member">
