@@ -37,6 +37,156 @@
     <link href="./files_new/css(3)" rel="stylesheet" type="text/css">
     <link href="./files_new/css2" rel="stylesheet" type="text/css">
 
+    <style>
+        :root {
+            --section-scroll-offset: 88px;
+        }
+
+        #news,
+        #introduction,
+        #call,
+        #program,
+        #speaker,
+        #panel,
+        #organization {
+            padding: 20px 0;
+            scroll-margin-top: var(--section-scroll-offset);
+        }
+
+        .hero-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin: 18px 0 12px;
+        }
+
+        .hero-meta-card {
+            min-width: 280px;
+            padding: 14px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 16px;
+            background: rgba(15, 23, 42, 0.28);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-meta-label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #fbbf24;
+        }
+
+        .hero-meta-value {
+            display: block;
+            font-size: 2rem;
+            line-height: 1.25;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .hero-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 100%;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            color: #ffffff;
+            font-size: 1.65rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .hero-email span {
+            overflow-wrap: anywhere;
+        }
+
+        .hero-email:hover,
+        .hero-email:focus {
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .hero-email i {
+            color: #fbbf24;
+            font-style: normal;
+            font-size: 1.35em;
+            line-height: 1;
+        }
+
+        .deadline-countdown {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 10px;
+            padding: 5px 12px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(44, 82, 130, 0.12), rgba(59, 130, 246, 0.18));
+            border: 1px solid rgba(44, 82, 130, 0.12);
+            color: #1e3a5f;
+            font-size: 0.88em;
+            font-weight: 600;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+
+        .deadline-countdown-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.45em;
+            height: 1.45em;
+            border-radius: 999px;
+            background: rgba(44, 82, 130, 0.12);
+            color: #2c5282;
+            font-size: 0.95em;
+            line-height: 1;
+        }
+
+        .deadline-countdown-label {
+            color: #2c5282;
+            font-weight: 700;
+        }
+
+        .deadline-countdown-value {
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.01em;
+        }
+
+        @media (max-width: 767px) {
+            .hero-meta-card {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .hero-meta-label {
+                font-size: 1.1rem;
+            }
+
+            .hero-meta-value,
+            .hero-email {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+
 </head>
 
 <body id="page-top" class="index satquml-modern">
@@ -123,10 +273,23 @@
             <div class="hero-content">
                 <span class="hero-badge">NeurIPS 2026 Workshop</span>
                 <h1 class="hero-title">SaTQuML: Secure and Trustworthy Quantum Machine Learning</h1>
-                <div class="hero-contact">Contact: <a href="mailto:SaTQuML@gmail.com">SaTQuML@gmail.com</a></div>
+                <div class="hero-meta-row">
+                    <div class="hero-meta-card">
+                        <span class="hero-meta-label">Venue</span>
+                        <span class="hero-meta-value">Atlanta, Georgia, United States</span>
+                    </div>
+                    <div class="hero-meta-card">
+                        <span class="hero-meta-label">Workshop Dates</span>
+                        <span class="hero-meta-value">December 12-13, 2026</span>
+                    </div>
+                </div>
                 <div class="hero-actions">
                     <a class="hero-btn primary" href="#call">Call for Papers</a>
                     <a class="hero-btn ghost" href="#program">View Schedule</a>
+                    <a class="hero-email" href="mailto:SaTQuML@gmail.com">
+                        <i aria-hidden="true">&#9993;</i>
+                        <span>SaTQuML@gmail.com</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -167,19 +330,24 @@
                             the Labor Day. We extend the submission deadline to <span
                                 style="font-weight: bold;">September 8, 2025 (AoE)</span>.
                         </li>
+                    -->
                         <li>
-                            <span style="font-weight: bold;">Call for reviewers:</span> We are actively looking for
-                            reviewers to join the program committee for the workshop. We encourage all interested
+                            <span style="font-weight: bold;">Call for Program Committee (PC):</span> We are actively
+                            looking
+                            for
+                            experts to join the program committee for the workshop. We encourage all interested
                             researchers to apply, especially those from underrepresented groups. Prior reviewer
                             experience is a nice-to-have, but not required. Interest and familiarity with subject
                             matters related to the workshop is required. If you are interested, please fill out the <a
-                                href="https://forms.gle/v1ihHMfbGdBggN5X6">
-                                application form</a> to join us. -->
+                                href="https://forms.gle/LnbEytnRXVhw4wJ4A">
+                                application form</a> to join us.
+                        </li>
+
                         <li>
-                            <span style="font-weight: bold;">Call for papers will be available here.</span>
-                            <!-- Submission portal open at <a
-                                href="https://openreview.net/group?id=NeurIPS.cc/2025/Workshop/ER">
-                                OpenReview</a> -->
+                            <span style="font-weight: bold;">Call for papers is available.</span>
+                            Submission portal will be open at <a
+                                href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/SaTQuML">
+                                OpenReview</a>
                         </li>
                     </ul>
                 </div>
@@ -330,48 +498,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <h3 style="color: #2d3748; margin: 30px 0 20px;">Key Problems We Aim to Address</h3>
 
-                    <div class="questions-grid">
-                        <div class="question-card">
-                            <div class="question-title">Dataset Curation</div>
-                            <div class="question-content">
-                                Design, create, and maintain high‑quality datasets for training and evaluating LRMs on
-                                challenging reasoning tasks under resource constraints. Contributions include
-                                long-context reasoning, symbolic planning, multi-hop deduction, and real-time
-                                decision-making on diverse domains.
-                            </div>
-                        </div>
-
-                        <div class="question-card">
-                            <div class="question-title">Algorithmic Innovation</div>
-                            <div class="question-content">
-                                Develop efficient training algorithms for supervised fine-tuning or reinforcement
-                                learning, and efficient inference methods like pruning, compression, progressive
-                                generation, and search‑based strategies, reducing time/space complexity without eroding
-                                accuracy or faithfulness.
-                            </div>
-                        </div>
-
-                        <div class="question-card">
-                            <div class="question-title">System Deployment</div>
-                            <div class="question-content">
-                                Implement efficient RL training systems and long-CoT inference engines to support
-                                current LRMs, while unlocking new reasoning potential on commodity GPUs. Techniques may
-                                include dynamic KV‑cache placement, quantized graph execution, and on‑device knowledge
-                                distillation
-                            </div>
-                        </div>
-
-                        <div class="question-card">
-                            <div class="question-title">Application</div>
-                            <div class="question-content">
-                                Adapt LRMs to enable real-time reasoning in resource-constrained scenarios, like
-                                clinical decision-making, robotics, autonomous driving, developing-world health, and
-                                on-orbit autonomy.
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -391,9 +518,11 @@
 
 
                             <p class="large text-muted">
-                                <b>The 1st Workshop on SaTQuML: Secure and Trustworthy Quantum Machine Learning</b>
-                                invites submissions from
-                                researchers focused on the ...
+                                <b>NeurIPS 2026 Workshop on SaTQuML: Secure and Trustworthy Quantum Machine Learning</b>
+                                invites submissions from researchers working on secure, reliable, and realistic
+                                quantum machine learning. We welcome work on trustworthy QML systems, rigorous
+                                benchmarking, cyberdefense applications, and secure deployment. See the scope section
+                                below for the broader workshop motivation and focus.
                             </p>
 
                             <div>
@@ -403,18 +532,19 @@
                                 <div class="key-dates-box">
                                     <ul class="large text-muted key-dates-list">
                                         <li>
-                                            <span style="font-weight: bold;">Paper Submission Open:</span> MM DD, 2026
+                                            <span style="font-weight: bold;">Submission Start:</span> August 15, 2026
+                                            (AoE)
+                                            <span class="deadline-countdown" data-deadline="2026-08-15T00:00:00-12:00" data-label="Opens in" data-state-text="Open now"></span>
                                         </li>
                                         <li>
-                                            <span style="font-weight: bold;">Paper Submission Deadline:</span>
-                                            <!-- <span
-                                                style="text-decoration: line-through;  text-decoration-thickness: 2px;">
-                                                MM DD, 2026 (AoE) </span>,  -->
-                                            MM DD, 2026 (AoE)
+                                            <span style="font-weight: bold;">Submission Deadline:</span>
+                                            August 29, 2026 (AoE)
+                                            <span class="deadline-countdown" data-deadline="2026-08-29T23:59:00-12:00" data-label="Time remaining" data-state-text="Deadline passed"></span>
                                         </li>
                                         <li>
-                                            <span style="font-weight: bold;">Paper Notification :</span>MM
-                                            DD, 2026 (AoE)
+                                            <span style="font-weight: bold;">Acceptance Notification:</span>
+                                            September 29, 2026 (AoE)
+                                            <span class="deadline-countdown" data-deadline="2026-09-29T23:59:00-12:00" data-label="Time remaining" data-state-text="Notification released"></span>
                                         </li>
                                         <!-- <li style="margin-bottom: 0rem;">
                                         <span style="font-weight: bold;">Second Round Submission Open:</span> September
@@ -429,11 +559,9 @@
                                         October 15, 2025 (AoE)
                                     </li> -->
                                         <li>
-                                            <span style="font-weight: bold;">Review Deadline:</span> MM DD, 2026 (AoE)
-                                        </li>
-                                        <li>
-                                            <span style="font-weight: bold;">Camera-ready Version Deadline:</span>
-                                            MM DD, 2026
+                                            <span style="font-weight: bold;">Camera-ready Deadline:</span>
+                                            October 15, 2026 (AoE)
+                                            <span class="deadline-countdown" data-deadline="2026-10-15T23:59:00-12:00" data-label="Time remaining" data-state-text="Camera-ready closed"></span>
                                         </li>
                                     </ul>
                                 </div>
@@ -449,21 +577,48 @@
                                     Submission Site</h1>
 
                                 <p class="large text-muted">
-                                    Submit papers through the ..
-
-                                    <!-- <a
-                                        href="https://openreview.net/group?id=NeurIPS.cc/2025/Workshop/ER">Workshop
-                                        Submission Portal
-                                    </a>on OpenReview. -->
+                                    Submit papers through the <a
+                                        href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/SaTQuML#tab-your-consoles">SaTQuML
+                                        submission portal on OpenReview</a>.
                                 </p>
                                 <div>
 
                                     <h1
                                         style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
+                                        Submission Tracks</h1>
+
+                                    <div class="scope-box">
+                                        <ul class="large text-muted scope-list">
+                                            <li><strong>Long Paper:</strong> 9 pages.</li>
+                                            <li><strong>Short Paper:</strong> 4 pages.</li>
+                                            <li><strong>Tiny Paper:</strong> 2 pages.</li>
+                                        </ul>
+                                    </div>
+
+                                    <h1
+                                        style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
                                         Scope</h1>
 
-                                    <p class="large text-muted">We welcome contributions across a broad spectrum of
-                                        topics, including but not limited to:</p>
+                                    <p class="large text-muted">Primary themes for the workshop include:</p>
+
+                                    <div class="scope-box">
+                                        <ul class="large text-muted scope-list">
+                                            <li><strong>Trustworthy QML Systems:</strong> Adversarial robustness,
+                                                privacy, reliability, model leakage, hardware noise, and distribution
+                                                shift.</li>
+                                            <li><strong>Rigorous Benchmarks and Evaluation:</strong> Realistic datasets
+                                                and threat models; strong baselines; reproducibility, ablations, and
+                                                negative results.</li>
+                                            <li><strong>QML for Cyberdefense:</strong> Intrusion, anomaly, malware,
+                                                fraud, and cyber-physical defense; vulnerability prioritization and
+                                                threat intelligence.</li>
+                                            <li><strong>Secure QML Deployment:</strong> Secure training and inference
+                                                across cloud, edge, quantum-cloud, and hybrid systems; remote-access
+                                                and pipeline risks.</li>
+                                        </ul>
+                                    </div>
+
+                                    <p class="large text-muted">Example subtopics and concrete directions include:</p>
 
                                     <div class="scope-box">
                                         <ul class="large text-muted scope-list">
@@ -505,9 +660,9 @@
                                             style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #2c5282; font-weight: 600;">
                                             Submission Guidelines</h1>
                                         <p class="large text-muted">
-                                            <mybold>Format:</mybold> &nbsp;All submissions must be a single PDF file. We
-                                            welcome high-quality original papers up to 9 pages, including both long and
-                                            short papers.
+                                            <mybold>Format:</mybold> &nbsp;All submissions must be a single PDF file.
+                                            We accept long papers up to 9 pages, short papers up to 4 pages, and tiny
+                                            papers up to 2 pages.
                                             References and appendices are not included in the page limit, but the main
                                             text must be self-contained. Reviewers are not required to read beyond the
                                             main text.
@@ -577,7 +732,6 @@
                                             <!-- <a
                                                 href="mailto:EfficientReasoning2025@googlegroups.com">EfficientReasoning2025@googlegroups.com</a> -->
                                         </p>
-                                        <br>
                                     </div>
                                 </div>
 
@@ -859,11 +1013,8 @@
                     <!-- <h3 class="section-subheading text-muted">>This is the tentative invited speakers. More speakers are invited.</h3> -->
                 </div>
             </div>
-            <p class="section-subheading text-muted">This is the tentative invited speakers. More speakers are invited.
-            </p>
-            <br>
-            <br>
-            <br>
+            <!-- <p class="section-subheading text-muted">This is the tentative invited speakers. More speakers are invited.
+            </p> -->
 
             <div class="speakers-grid">
 
@@ -907,76 +1058,7 @@
                     <p class="text-muted">Sookmyung Women's University</p>
                 </div>
 
-                <div class="team-member">
-                    <img src="./img/aakashkolekar.jpeg" alt="Aakash Kolekar" class="img-responsive img-circle">
-                    <a href="https://www.linkedin.com/in/aakashkolekar/">
-                        <h4>Aakash Kolekar</h4>
-                    </a>
-                    <p class="text-muted">Senior AI Research Scientist, Amazon AI</p>
-                </div>
 
-                <!-- <div class="team-member">
-                    <img src="./files_new/NM.png" class="img-responsive img-circle">
-                    <a href="https://muennighoff.github.io/">
-                        <h4>Niklas Muennighoff</h4>
-                    </a>
-                    <p class="text-muted">Stanford</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="./files_new/yuandong.png" class="img-responsive img-circle">
-                    <a href="https://yuandong-tian.com/">
-                        <h4>Yuandong Tian</h4>
-                    </a>
-                    <p class="text-muted">Meta</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="./files_new/wei_xu_0.png" class="img-responsive img-circle">
-                    <a href="https://cocoxu.github.io/">
-                        <h4>Wei Xu</h4>
-                    </a>
-                    <p class="text-muted">Georgia Institute of Technology</p>
-                </div> -->
-
-                <!-- <div class="team-member">
-                    <img src="./files_new/YW.jpg" class="img-responsive img-circle">
-                    <a href="https://jxwuyi.weebly.com/">
-                        <h4>Yi Wu</h4>
-                    </a>
-                    <p class="text-muted">Tsinghua University</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="./files_new/HZ.png" class="img-responsive img-circle">
-                    <a href="https://cseweb.ucsd.edu/~haozhang/">
-                        <h4>Hao Zhang</h4>
-                    </a>
-                    <p class="text-muted">UCSD</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="./files_new/wangzhang.jpg" class="img-responsive img-circle">
-                    <a href="https://www.linkedin.com/in/wang-zhang/">
-                        <h4>Wang Zhang</h4>
-                    </a>
-                    <p class="text-muted">ByteDance Seed</p>
-                </div> -->
-                <!--<div class="team-member">
-                    <img src="./files_new/CX.png" class="img-responsive img-circle">
-                    <a href="http://cmxiong.com">
-                        <h4>Caiming Xiong</h4>
-                    </a>
-                    <p class="text-muted">Salesforce</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="./files_new/PT.png" class="img-responsive img-circle">
-                    <a href="https://eng.ox.ac.uk/people/philip-torr/">
-                        <h4>Philip Torr </h4>
-                    </a>
-                    <p class="text-muted">University of Oxford</p>
-                </div>-->
 
             </div>
         </div>
@@ -990,9 +1072,6 @@
                     <!-- <h3 class="section-subheading text-muted">>This is the tentative invited speakers. More speakers are invited.</h3> -->
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
 
             <div class="speakers-grid">
 
@@ -1010,6 +1089,14 @@
                         <h4>Kanad Basu</h4>
                     </a>
                     <p class="text-muted">Rensselaer Polytechnic Institute</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./img/aakashkolekar.jpeg" alt="Aakash Kolekar" class="img-responsive img-circle">
+                    <a href="https://www.linkedin.com/in/aakashkolekar/">
+                        <h4>Aakash Kolekar</h4>
+                    </a>
+                    <p class="text-muted">Senior AI Research Scientist, Amazon AI</p>
                 </div>
 
                 <!-- <div class="team-member">
@@ -1082,9 +1169,6 @@
                     <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
             <div class="organizers-grid">
                 <div class="team-member">
                     <img src="./img/saidur-rahman.jpg" class="img-responsive img-circle">
@@ -1447,6 +1531,59 @@
                 }
                 links[i].setAttribute('rel', rel);
             }
+        })();
+
+        (function () {
+            var countdowns = document.querySelectorAll('.deadline-countdown[data-deadline]');
+            var countdownIntervalId;
+
+            function renderCountdownContent(element, label, value) {
+                element.innerHTML = '<span class="deadline-countdown-icon" aria-hidden="true">&#9716;</span>' +
+                    '<span class="deadline-countdown-label">' + label + '</span>' +
+                    '<span class="deadline-countdown-value">' + value + '</span>';
+            }
+
+            function renderCountdownState(element, text) {
+                element.innerHTML = '<span class="deadline-countdown-icon" aria-hidden="true">&#9716;</span>' +
+                    '<span class="deadline-countdown-value">' + text + '</span>';
+            }
+
+            function renderCountdown() {
+                var now = new Date();
+
+                for (var i = 0; i < countdowns.length; i++) {
+                    var deadline = new Date(countdowns[i].getAttribute('data-deadline'));
+                    var diffMs = deadline.getTime() - now.getTime();
+                    var label = countdowns[i].getAttribute('data-label') || 'Time remaining';
+
+                    if (isNaN(deadline.getTime())) {
+                        renderCountdownContent(countdowns[i], label, 'date unavailable');
+                        continue;
+                    }
+
+                    if (diffMs <= 0) {
+                        renderCountdownState(
+                            countdowns[i],
+                            countdowns[i].getAttribute('data-state-text') || 'Deadline passed'
+                        );
+                        continue;
+                    }
+
+                    var totalMinutes = Math.floor(diffMs / 60000);
+                    var days = Math.floor(totalMinutes / 1440);
+                    var hours = Math.floor((totalMinutes % 1440) / 60);
+                    var minutes = totalMinutes % 60;
+
+                    renderCountdownContent(countdowns[i], label, days + 'd ' + hours + 'h ' + minutes + 'm');
+                }
+            }
+
+            renderCountdown();
+
+            window.setTimeout(function () {
+                renderCountdown();
+                countdownIntervalId = window.setInterval(renderCountdown, 60000);
+            }, 60000 - (Date.now() % 60000));
         })();
     </script>
 
