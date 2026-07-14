@@ -131,6 +131,79 @@
             line-height: 1;
         }
 
+        .hero-interest {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 100%;
+            padding: 10px 18px;
+            border: 1px solid rgba(251, 191, 36, 0.45);
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(245, 158, 11, 0.28));
+            color: #fff9eb;
+            font-size: 1.55rem;
+            font-weight: 700;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .hero-interest:hover,
+        .hero-interest:focus {
+            color: #fff9eb;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.24), rgba(245, 158, 11, 0.34));
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.2);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .hero-interest:focus-visible {
+            outline: 3px solid rgba(255, 255, 255, 0.8);
+            outline-offset: 3px;
+        }
+
+        .hero-interest.is-active {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.24), rgba(5, 150, 105, 0.34));
+            border-color: rgba(16, 185, 129, 0.42);
+            color: #ecfdf5;
+        }
+
+        .hero-interest-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.8em;
+            height: 1.8em;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+            font-size: 1em;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .hero-interest-copy {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.1;
+        }
+
+        .hero-interest-text {
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+        .hero-interest-count {
+            font-size: 0.8em;
+            font-weight: 600;
+            opacity: 0.9;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .hero-interest.is-loading {
+            opacity: 0.8;
+            cursor: progress;
+        }
+
         .deadline-countdown {
             display: inline-flex;
             align-items: center;
@@ -183,6 +256,12 @@
             .hero-meta-value,
             .hero-email {
                 font-size: 1.4rem;
+            }
+
+            .hero-interest {
+                width: 100%;
+                justify-content: center;
+                font-size: 1.35rem;
             }
         }
     </style>
@@ -290,6 +369,13 @@
                         <i aria-hidden="true">&#9993;</i>
                         <span>SaTQuML@gmail.com</span>
                     </a>
+                    <button class="hero-interest" type="button" data-interest-button aria-pressed="false">
+                        <span class="hero-interest-icon" aria-hidden="true">&#10024;</span>
+                        <span class="hero-interest-copy">
+                            <span class="hero-interest-text">I'm interested in SaTQuML</span>
+                            <span class="hero-interest-count" data-interest-count>Loading interest...</span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1584,6 +1670,110 @@
                 renderCountdown();
                 countdownIntervalId = window.setInterval(renderCountdown, 60000);
             }, 60000 - (Date.now() % 60000));
+        })();
+
+        (function () {
+            var interestButton = document.querySelector('[data-interest-button]');
+            var interestCount = document.querySelector('[data-interest-count]');
+            var localStorageKey = 'satquml-interest-clicked-v1';
+            var counterUrl = 'https://api.countapi.xyz';
+            var counterNamespace = 'satquml-neurips-2026';
+            var counterKey = 'hero-interest';
+            var isSubmitting = false;
+            var inMemoryClicked = false;
+            var hasRecordedInterest = false;
+
+            if (!interestButton || !interestCount) {
+                return;
+            }
+
+            function getStoredInterestState() {
+                try {
+                    return window.localStorage.getItem(localStorageKey) === 'true';
+                } catch (error) {
+                    return inMemoryClicked;
+                }
+            }
+
+            function setStoredInterestState() {
+                inMemoryClicked = true;
+
+                try {
+                    window.localStorage.setItem(localStorageKey, 'true');
+                } catch (error) {
+                    return;
+                }
+            }
+
+            function setInterestState(isActive) {
+                interestButton.classList.toggle('is-active', isActive);
+                interestButton.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                interestButton.querySelector('.hero-interest-text').textContent = isActive
+                    ? 'You are interested in SaTQuML'
+                    : "I'm interested in SaTQuML";
+            }
+
+            function setInterestCountText(value) {
+                interestCount.textContent = value === 1 ? '1 interest signal' : value + ' interest signals';
+            }
+
+            function fetchCounter(endpoint) {
+                return window.fetch(endpoint, { method: 'GET' }).then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('Counter request failed');
+                    }
+
+                    return response.json();
+                });
+            }
+
+            function loadInterestCount() {
+                return fetchCounter(counterUrl + '/get/' + counterNamespace + '/' + counterKey)
+                    .then(function (payload) {
+                        if (hasRecordedInterest || getStoredInterestState()) {
+                            return;
+                        }
+
+                        setInterestCountText(payload.value || 0);
+                    })
+                    .catch(function () {
+                        if (hasRecordedInterest || getStoredInterestState()) {
+                            return;
+                        }
+
+                        interestCount.textContent = 'Interest count unavailable';
+                    });
+            }
+
+            hasRecordedInterest = getStoredInterestState();
+            setInterestState(hasRecordedInterest);
+            loadInterestCount();
+
+            interestButton.addEventListener('click', function () {
+                if (isSubmitting || getStoredInterestState()) {
+                    setInterestState(true);
+                    return;
+                }
+
+                isSubmitting = true;
+                interestButton.classList.add('is-loading');
+                interestButton.disabled = true;
+                fetchCounter(counterUrl + '/hit/' + counterNamespace + '/' + counterKey)
+                    .then(function (payload) {
+                        setStoredInterestState();
+                        hasRecordedInterest = true;
+                        setInterestState(true);
+                        setInterestCountText(payload.value || 1);
+                    })
+                    .catch(function () {
+                        interestCount.textContent = 'Could not record interest';
+                    })
+                    .finally(function () {
+                        isSubmitting = false;
+                        interestButton.classList.remove('is-loading');
+                        interestButton.disabled = false;
+                    });
+            });
         })();
     </script>
 
